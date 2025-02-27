@@ -10,8 +10,8 @@ public class SecondMovement: MonoBehaviour
         if (ctx.performed == true)
         {
             Vector2 playerInput = ctx.ReadValue<Vector2>();
-            cubeDirection.x = playerInput.x;
-            //cubeDirection.y = playerInput.y; //up and down movement
+            cubeDirection.x = playerInput.x; //left and right movement
+            cubeDirection.y = playerInput.y; //up and down movement
         }
         else
         {
@@ -20,7 +20,7 @@ public class SecondMovement: MonoBehaviour
     }
     public void Update()
     {
-        Vector2 movement = new Vector2(cubeDirection.x, 0) * moveSpeedAgain *
+        Vector2 movement = new Vector2(cubeDirection.x, cubeDirection.y) * moveSpeedAgain *
         Time.deltaTime;
         transform.Translate(movement);
     }

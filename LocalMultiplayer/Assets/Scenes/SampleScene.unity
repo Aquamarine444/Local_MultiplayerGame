@@ -852,7 +852,7 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 9b48bfec-cb4c-4e1c-af7f-27232de51613
     m_ActionName: 'Player_002/Shoot_02[/Keyboard/rightShift]'
-  m_NeverAutoSwitchControlSchemes: 1
+  m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Controller
   m_DefaultActionMap: Player_001
   m_SplitScreenIndex: -1

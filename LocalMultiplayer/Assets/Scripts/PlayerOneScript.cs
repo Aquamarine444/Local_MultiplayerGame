@@ -14,10 +14,13 @@ public class PlayerOneScript: MonoBehaviour
     public Transform shootPoint;
     public float projectileSpeed = 10f;
 
+    public Animator Anim;
+
     private void Awake() //Starts as soon as the game runs
         //Start starts on the first fram
     {
         rb = GetComponent<Rigidbody>(); // Ensure cube has a Rigidbody component
+        Anim = GetComponent<Animator>();
     }
 
     public void MovePlayerOne(InputAction.CallbackContext ctx)
@@ -39,6 +42,7 @@ public class PlayerOneScript: MonoBehaviour
         if (ctx.performed && Mathf.Abs(rb.linearVelocity.y) < 0.01f)
         {
             rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+            Anim.SetTrigger("Jump");
         }
     }
 
